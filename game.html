@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランダムカラーアプリ</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    #colorDisplay {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    #colorButton {
+      font-size: 16px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #4285f4;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="colorDisplay">カラーを表示します</div>
+  <button id="colorButton" onclick="changeColor()">クリックしてカラーを表示</button>
+
+  <script>
+    const colors = [
+      '桜色', '珊瑚色', '茜色', '朱色', '紅梅色', '煉瓦色', '山吹色', '栗色', '黄土色', '芥子色',
+      '鶯色', '萌黄', '若竹色', '松葉色', '青磁色', '浅葱色', '藍色', '空色', '瑠璃色', '杜若色',
+      '桔梗色', '群青色', '茄子紺', '牡丹色', '菖蒲色', '生成色', 'ワインレッド', 'ボルドー', 'ベビーピンク',
+      'カーマイン', 'スカーレット', 'バーミリオン', 'サーモンピンク', 'ピーチ', 'チョコレート', 'マリーゴールド',
+      'ベージュ', 'カーキー', 'セピア', 'ブロンド', 'クリームイエロー', 'レモンイエロー', 'カナリヤ', 'オリーブ',
+      'オリーブグリーン', 'コバルトグリーン', 'エメラルドグリーン', 'ビリジアン', 'ターコイズブルー', 'マリンブルー',
+      'シアン', 'ベビーブルー', 'スカイブルー', 'コバルトブルー', 'ネービーブルー', 'ウルトラマリンブルー', 'モーブ',
+      'バイオレット', 'ラベンダー', 'パープル', 'マゼンタ', 'アイボリー', 'チャコールグレイ', 'シルバーグレイ',
+      '鴇色', '韓紅花', '蘇芳', '鳶色', '海老茶', '弁柄色', '檜皮色', '琥珀色', '黄丹', '代赭', '柑子色',
+      '朽葉色', '鬱金色', '苅安色', '黄檗色', '鶸色', '海松色', '常磐色', '緑青色', '鉄色', '新橋色', '納戸色',
+      '甕覗き', '縹色', '藤色', '江戸紫', '古代紫', '銀鼠', '茶鼠', '利休鼠', '煤竹色', 'ローズピンク', 'バーガンディー',
+      'オールドローズ', 'ポピーレッド', 'マルーン', 'テラコッタ', 'バーンとシェンな', 'ローシェンナ', 'タン', 'エクルベイジュ',
+      'ゴールデンイエロー', 'アンバー', 'バーンとアンバー', 'ローアンバー', 'ネープルスイエロー', 'ジョンブリアン',
+      'シャトルーズグリーン', 'リーフグリーン', 'グラスグリーン', 'アップルグリーン', 'ミントグリーン', 'マラカイトグリーン',
+      'ボトルグリーン', 'ピーコックグリーン', 'ナイルブルー', 'セルリアンブルー', 'サックスブルー', 'ミッドナイトブルー',
+      'ウイスタリア', 'ライラック', 'スレートグレイ', 'ランプブラック'
+    ];
+
+    function changeColor() {
+      const colorDisplay = document.getElementById('colorDisplay');
+      const randomIndex = Math.floor(Math.random() * colors.length);
+      const randomColor = colors[randomIndex];
+      colorDisplay.textContent = randomColor;
+    }
+  </script>
+</body>
+</html>
